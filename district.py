@@ -53,4 +53,4 @@ class District:
         "green" or "not green"
         """
         return_dict = {}
-        for district in self.dataset.data["denominazione_region"]:
+
