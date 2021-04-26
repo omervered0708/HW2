@@ -59,4 +59,10 @@ class District:
         for district, day_type in relevant_pairs:
             return_dict[district] += day_type
 
+        for dist_key in return_dict.keys():
+            if return_dict[dist_key] > 340:
+                return_dict[dist_key] = "green"
+            else:
+                return_dict[dist_key] = "not green"
+
         return return_dict
