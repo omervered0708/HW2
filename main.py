@@ -12,5 +12,6 @@ def main(argv):
     stat_funcs = [statistiscs.mean, statistiscs.median]
     dist.print_details(features, stat_funcs)
 
+
 if __name__ == '__main__':
     main(sys.argv)
