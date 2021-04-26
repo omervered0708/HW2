@@ -17,7 +17,7 @@ class District:
         :param letters: set of letters
         :return: none
         """
-        districts_set = [ district for district in self.dataset["denominazione_region"] if district[0] in letters ]
+        districts_set = [district for district in self.dataset["denominazione_region"] if district[0] in letters]
         self.dataset.set_districts_data(districts_set)
 
     def print_details(self, features, statistic_functions):
