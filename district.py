@@ -1,5 +1,5 @@
 import data
-import statist
+import statistics
 
 
 class District:
@@ -53,4 +53,10 @@ class District:
         "green" or "not green"
         """
         return_dict = {}
+        # create zip object of pairs of "district" and "day_type"
+        relevant_pairs = zip(self.dataset.data["denominazione_region"], self.dataset.data["day_type"])
+        # fill 'return_dict'
+        for district, day_type in relevant_pairs:
+            return_dict[district] += day_type
 
+        return return_dict
