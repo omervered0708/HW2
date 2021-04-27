@@ -15,7 +15,8 @@ class Data:
 
         :return: return the a list of the districts names
         """
-        return self.data["denominazione_region"]
+        helper = set(self.data["denominazione_region"])
+        return list(helper)
 
     def set_districts_data(self, districts):
         """
