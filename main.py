@@ -5,6 +5,7 @@ import statistiscs
 
 
 def main(argv):
+    print("Question 1:")
     dataset1 = data.Data(argv[1])
     dist1 = district.District(dataset1)
     dist1.filter_district({"L", "S"})
@@ -13,6 +14,7 @@ def main(argv):
     dist1.print_details(features, stat_funcs)
     dataset2 = data.Data(argv[1])
     district_names = dataset2.get_all_districts()
+    print("\nQuestion 2:")
     print(f"Number of districts: {len(district_names)}")
     dist2 = district.District(dataset2)
     not_green = dist2.not_green_num()
