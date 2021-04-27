@@ -26,4 +26,4 @@ def median(values):
         med /= 2
     else:
         med = values[ceil(n/2)-1]
-    return float(med)
+    return med

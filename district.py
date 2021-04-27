@@ -52,6 +52,7 @@ class District:
         :return: dictionary whose keys are the names of all districts in 'self.dataset.data' and values are the stings
         "green" or "not green"
         """
+        self.determine_day_type()
         return_dict = {}
         # create zip object of pairs of "district" and "day_type"
         relevant_pairs = zip(self.dataset.data["denominazione_region"], self.dataset.data["day_type"])
@@ -66,3 +67,10 @@ class District:
                 return_dict[dist_key] = "not green"
 
         return return_dict
+
+    def not_green_num(self):
+        is_green_dict = self.get_district_class()
+        count = 0
+        for value in is_green_dict.values():
+            if value == "not green":
+                count += 1
