@@ -77,3 +77,5 @@ class District:
         for value in is_green_dict.values():
             if value == "not green":
                 count += 1
+
+        return count
