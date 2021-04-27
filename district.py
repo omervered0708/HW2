@@ -53,7 +53,10 @@ class District:
         "green" or "not green"
         """
         self.determine_day_type()
+        # initialize 'return_dict'
         return_dict = {}
+        for dist in self.dataset.data["denominazione_region"]:
+            return_dict[dist] = 0
         # create zip object of pairs of "district" and "day_type"
         relevant_pairs = zip(self.dataset.data["denominazione_region"], self.dataset.data["day_type"])
         # fill 'return_dict'
