@@ -6,13 +6,13 @@ class Data:
         """
         the function loads the data from the csv file
          :param path: the path to the csv file
+         :return: none
         """
         df = pandas.read_csv(path)
         self.data = df.to_dict(orient="list")
 
     def get_all_districts(self):
         """
-
         :return: return the a list of the districts names
         """
         helper = set(self.data["denominazione_region"])
@@ -20,8 +20,9 @@ class Data:
 
     def set_districts_data(self, districts):
         """
-        the functions changes data so that only the records with districts in district remain
+        the functions changes data so that only the records with districts in 'district' remain
         :param districts: a list of district names
+        :return: none
         """
         help_dict = {}
         init_dict(help_dict, self.data)
@@ -33,7 +34,7 @@ class Data:
 
 def init_dict(dict, data):
     """
-    the function initializes dict with the keys from data and empty lists as values
+    the function initializes 'dict' with the keys from data and empty lists as values
     :param dict: a dictionary to initialize
     :param data: a dictionary with the keys used to initialize dict
     :return: none
@@ -44,7 +45,7 @@ def init_dict(dict, data):
 
 def copy_to_dict(data, i, dict):
     """
-    the function copies the ith value in each list in data to dict
+    the function copies the i-th value in each list in data to dict
     :param data: a dictionary to copy from
     :param i: index in the lists to copy
     :param dict: a dictionary to copy to

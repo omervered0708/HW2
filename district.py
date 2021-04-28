@@ -48,7 +48,6 @@ class District:
 
     def get_district_class(self):
         """
-
         :return: dictionary whose keys are the names of all districts in 'self.dataset.data' and values are the stings
         "green" or "not green"
         """
@@ -72,10 +71,16 @@ class District:
         return return_dict
 
     def not_green_num(self):
+        """
+        :return: the number of district which are not green
+        """
+        # find green and not green district
         is_green_dict = self.get_district_class()
+        # count the number of 'not green' districts
         count = 0
         for value in is_green_dict.values():
             if value == "not green":
                 count += 1
 
         return count
+
